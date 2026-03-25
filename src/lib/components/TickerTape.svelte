@@ -1,15 +1,16 @@
 <script>
-  // Simple CSS scrolling ticker tape for a maximalist magazine feel
-  const messages = [
+  let {
+    messages = [
     "EPSS MODEL UPDATED 04:00Z //",
     "CVE-2024-3094 XZ BACKDOOR EXPLOIT PROBABILITY DECREASED //",
     "NEW KEV ENTRIES DETECTED: 12 //",
     "LOG4SHELL REACHES 3-YEAR ANNIVERSARY //",
     "GLOBAL THREAT INDEX: ELEVATED //",
     "ZERO-DAY OBSERVED IN WILD, AWAITING NVD ENTRY //"
-  ];
+    ]
+  } = $props();
 
-  let displayString = messages.join('     ') + '     ' + messages.join('     ');
+  let displayString = $derived(messages.join('     ') + '     ' + messages.join('     '));
 </script>
 
 <div class="ticker-wrapper">

@@ -88,6 +88,7 @@
     font-size: 1rem;
     font-weight: 500;
     max-width: 80%;
+    overflow-wrap: anywhere;
   }
 
   .highlight .stat-desc {
@@ -104,6 +105,10 @@
     }
     .stat-block:last-child {
       border-bottom: none;
+    }
+
+    .stat-desc {
+      max-width: 100%;
     }
   }
 </style>

@@ -91,6 +91,8 @@
 
   .target-flash {
     color: var(--accent-chartreuse);
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   .mega-title {
@@ -101,6 +103,7 @@
     margin: 3rem 0;
     text-transform: uppercase;
     letter-spacing: -0.04em;
+    overflow-wrap: anywhere;
   }
 
   .outline {
@@ -128,6 +131,8 @@
     font-size: 2.5rem;
     line-height: 1;
     letter-spacing: -2px;
+    max-width: 100%;
+    overflow: hidden;
   }
 
   @media (max-width: 800px) {
@@ -155,6 +160,22 @@
     }
     .sub-masthead p {
       max-width: 100%;
+    }
+
+    .barcode {
+      font-size: 1.75rem;
+      letter-spacing: -1px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .mega-title {
+      font-size: clamp(2.4rem, 14vw, 4rem);
+      margin: 2rem 0;
+    }
+
+    .val {
+      font-size: 0.8rem;
     }
   }
 </style>

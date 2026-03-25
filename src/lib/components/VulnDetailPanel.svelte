@@ -150,11 +150,13 @@ spec:
 
   .mega-id {
     font-family: var(--font-display);
-    font-size: 3rem;
+    font-size: clamp(1.6rem, 4.5vw, 3rem);
     font-weight: 800;
     line-height: 1;
     margin-bottom: 1rem;
     color: var(--accent-chartreuse);
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   .pkg-box {
@@ -180,6 +182,8 @@ spec:
     font-weight: 700;
     font-size: 0.8rem;
     cursor: pointer;
+    min-width: 0;
+    overflow-wrap: anywhere;
   }
 
   .tabs button:last-child { border-right: none; }
@@ -194,6 +198,7 @@ spec:
     display: flex;
     flex-direction: column;
     min-height: 500px;
+    min-width: 0;
   }
 
   .svg-container {
@@ -212,6 +217,8 @@ spec:
   .d-row {
     display: flex;
     justify-content: space-between;
+    gap: 0.8rem;
+    flex-wrap: wrap;
     border-bottom: 1px dotted var(--ink-faint);
     padding: 1rem 0;
     font-family: var(--font-mono);
@@ -230,6 +237,12 @@ spec:
     font-size: 0.85rem;
     overflow-x: auto;
     height: 400px;
+  }
+
+  .code-view pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-word;
   }
 
   .action-float {
@@ -263,5 +276,41 @@ spec:
     font-size: 1.5rem;
     font-weight: 800;
     margin-top: 0.5rem;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  @media (max-width: 640px) {
+    .panel-header {
+      padding: 1rem;
+    }
+
+    .panel-content {
+      padding: 1rem;
+      min-height: auto;
+    }
+
+    .tabs button {
+      font-size: 0.7rem;
+      padding: 0.7rem 0.3rem;
+    }
+
+    .d-val {
+      font-size: 1rem;
+    }
+
+    .d-val.focus {
+      font-size: 1.2rem;
+    }
+
+    .code-view {
+      font-size: 0.75rem;
+      height: 320px;
+      padding: 1rem;
+    }
+
+    .fix-val {
+      font-size: 1.1rem;
+    }
   }
 </style>

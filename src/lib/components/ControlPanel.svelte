@@ -59,6 +59,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
     background: var(--ink-main);
     color: var(--bg-paper);
     padding: 1rem 2rem;
@@ -73,6 +75,7 @@
     gap: 1rem;
     flex-grow: 1;
     max-width: 400px;
+    min-width: 220px;
   }
 
   .search-icon {
@@ -102,6 +105,7 @@
     align-items: center;
     gap: 1rem;
     flex-wrap: wrap;
+    min-width: 0;
   }
 
   .lbl {
@@ -145,8 +149,30 @@
 
   @media (max-width: 1280px) {
     .control-panel {
-      flex-wrap: wrap;
-      gap: 1.5rem;
+      gap: 1.25rem;
+      padding: 1rem;
+    }
+
+    .search-box,
+    .filter-group,
+    .actions {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 640px) {
+    button {
+      font-size: 0.75rem;
+      padding: 0.35rem 0.55rem;
+    }
+
+    .search-box input {
+      font-size: 0.85rem;
+    }
+
+    .lbl {
+      width: 100%;
     }
   }
 </style>
