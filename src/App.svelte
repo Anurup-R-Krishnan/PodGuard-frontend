@@ -3,14 +3,14 @@
   import { fly, fade } from 'svelte/transition';
   import { expoOut } from 'svelte/easing';
   
-  import Masthead from '$lib/components/Masthead.svelte';
-  import StatStrip from '$lib/components/StatStrip.svelte';
-  import ControlPanel from '$lib/components/ControlPanel.svelte';
-  import VulnerabilityGrid from '$lib/components/VulnerabilityGrid.svelte';
-  import VulnDetailPanel from '$lib/components/VulnDetailPanel.svelte';
-  import TickerTape from '$lib/components/TickerTape.svelte';
+  import Masthead from './lib/components/Masthead.svelte';
+  import StatStrip from './lib/components/StatStrip.svelte';
+  import ControlPanel from './lib/components/ControlPanel.svelte';
+  import VulnerabilityGrid from './lib/components/VulnerabilityGrid.svelte';
+  import VulnDetailPanel from './lib/components/VulnDetailPanel.svelte';
+  import TickerTape from './lib/components/TickerTape.svelte';
   
-  import realData from '$lib/real_data.json';
+  import realData from './lib/real_data.json';
 
   // State using Svelte 5 runes
   let isLoaded = $state(false);
