@@ -188,6 +188,10 @@
     padding-right: 2vw;
   }
 
+  .maximal-layout.panel-open :global(.masthead .mega-title) {
+    font-size: clamp(1.8rem, 4.8vw, 4.8rem);
+  }
+
   .detail-sidebar {
     position: fixed;
     top: 0;
@@ -222,6 +226,10 @@
       width: 100%;
       border-left: none;
       border-top: var(--border-thick);
+    }
+
+    .maximal-layout.panel-open :global(.masthead .mega-title) {
+      font-size: clamp(2rem, 9vw, 5rem);
     }
   }
 
