@@ -44,6 +44,8 @@
     border-bottom: var(--border-thick);
     padding: 2rem 0;
     margin-bottom: 2rem;
+    max-width: 100%;
+    overflow: hidden;
   }
 
   .top-meta {
@@ -97,13 +99,15 @@
 
   .mega-title {
     font-family: var(--font-display);
-    font-size: clamp(4rem, 11vw, 12rem);
+    font-size: clamp(2.4rem, 8.5vw, 8.5rem);
     font-weight: 800;
     line-height: 0.85;
     margin: 3rem 0;
     text-transform: uppercase;
     letter-spacing: -0.04em;
     overflow-wrap: anywhere;
+    word-break: break-word;
+    max-inline-size: 100%;
   }
 
   .outline {
@@ -176,6 +180,12 @@
 
     .val {
       font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width: 1400px) {
+    .mega-title {
+      font-size: clamp(2.3rem, 7.2vw, 7rem);
     }
   }
 </style>
