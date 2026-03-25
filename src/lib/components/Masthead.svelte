@@ -129,4 +129,32 @@
     line-height: 1;
     letter-spacing: -2px;
   }
+
+  @media (max-width: 800px) {
+    .top-meta {
+      grid-template-columns: 1fr;
+    }
+    .meta-section {
+      border-right: none;
+      border-bottom: var(--border-thin);
+    }
+    .meta-section:last-child {
+      border-bottom: none;
+    }
+    .meta-section.align-right {
+      text-align: left;
+      align-items: flex-start;
+    }
+    .mega-title {
+      font-size: clamp(3.5rem, 15vw, 6rem);
+    }
+    .sub-masthead {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+    .sub-masthead p {
+      max-width: 100%;
+    }
+  }
 </style>

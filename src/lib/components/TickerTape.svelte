@@ -21,7 +21,7 @@
 
 <style>
   .ticker-wrapper {
-    width: 100vw;
+    width: 100%;
     background: var(--ink-main);
     color: var(--accent-chartreuse);
     padding: 0.5rem 0;

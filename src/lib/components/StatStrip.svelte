@@ -93,4 +93,17 @@
   .highlight .stat-desc {
     color: rgba(255,255,255,0.9);
   }
+
+  @media (max-width: 800px) {
+    .stat-strip {
+      grid-template-columns: 1fr;
+    }
+    .stat-block {
+      border-right: none;
+      border-bottom: var(--border-thin);
+    }
+    .stat-block:last-child {
+      border-bottom: none;
+    }
+  }
 </style>
