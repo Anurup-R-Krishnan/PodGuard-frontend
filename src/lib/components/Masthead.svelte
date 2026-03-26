@@ -28,7 +28,7 @@
 
   <h1 class="mega-title">
     <span class="outline">THREAT</span><br />
-    INTELLIGENCE
+    INTELLI&shy;GENCE
   </h1>
 
   <div class="sub-masthead">

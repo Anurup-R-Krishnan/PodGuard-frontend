@@ -73,7 +73,7 @@
 
   .stat-value {
     font-family: var(--font-display);
-    font-size: clamp(4rem, 6vw, 6rem);
+    font-size: clamp(3rem, 4.5vw, 6rem);
     font-weight: 800;
     line-height: 0.9;
     letter-spacing: -0.05em;
@@ -95,7 +95,7 @@
     color: rgba(255,255,255,0.9);
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1024px) {
     .stat-strip {
       grid-template-columns: 1fr;
     }
