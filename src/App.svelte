@@ -111,14 +111,15 @@
       box-sizing: border-box;
     }
 
-    body {
+    html, body {
       background-color: var(--bg-paper);
       color: var(--ink-main);
       margin: 0;
       padding: 0;
       font-family: var(--font-ui);
       -webkit-font-smoothing: antialiased;
-      overflow-x: clip;
+      overflow-x: hidden;
+      max-width: 100vw;
     }
   </style>
 </svelte:head>
@@ -189,7 +190,7 @@
   }
 
   .maximal-layout.panel-open :global(.masthead .mega-title) {
-    font-size: clamp(1.8rem, 4.8vw, 4.8rem);
+    font-size: clamp(1.8rem, 5.5vw, 4.8rem);
   }
 
   .detail-sidebar {

@@ -94,27 +94,21 @@
 
   .target-flash {
     color: var(--accent-chartreuse);
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
     word-break: break-word;
   }
 
   .mega-title {
     font-family: var(--font-display);
-    font-size: clamp(1.7rem, 4.8vw, 4.8rem);
+    font-size: clamp(1.7rem, 6.5vw, 4.8rem);
     font-weight: 800;
     line-height: 0.85;
     margin: 2.25rem 0;
     text-transform: uppercase;
     letter-spacing: -0.04em;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
     word-break: break-word;
     max-inline-size: 100%;
-  }
-
-  @supports (font-size: 1cqw) {
-    .mega-title {
-      font-size: clamp(1.7rem, 11cqw, 4.8rem);
-    }
   }
 
   .outline {
@@ -131,19 +125,24 @@
     font-weight: 500;
     border-top: var(--border-thin);
     padding-top: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 
   .sub-masthead p {
     margin: 0;
     max-width: 60%;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 
   .barcode {
     font-size: 2.5rem;
     line-height: 1;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     max-width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
+    flex-shrink: 0;
   }
 
   @media (max-width: 800px) {
@@ -162,7 +161,7 @@
       align-items: flex-start;
     }
     .mega-title {
-      font-size: clamp(2rem, 10.5vw, 3.7rem);
+      font-size: clamp(2rem, 9vw, 3.7rem);
     }
     .sub-masthead {
       flex-direction: column;
@@ -181,7 +180,7 @@
 
   @media (max-width: 480px) {
     .mega-title {
-      font-size: clamp(1.75rem, 10.5vw, 3rem);
+      font-size: clamp(1.75rem, 11vw, 3rem);
       margin: 2rem 0;
     }
 
@@ -192,7 +191,7 @@
 
   @media (max-width: 1400px) {
     .mega-title {
-      font-size: clamp(1.8rem, 4.6vw, 4.4rem);
+      font-size: clamp(1.8rem, 5.5vw, 4.4rem);
     }
   }
 </style>

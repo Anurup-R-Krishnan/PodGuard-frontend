@@ -74,7 +74,8 @@ def _compute_metrics(vulns: list[dict]) -> dict:
 def main() -> None:
     reports = _load_reports()
     if not reports:
-        raise SystemExit(f"No report files found in: {REPORTS_DIR}")
+        print(f"Warning: No report files found in: {REPORTS_DIR}. Skipping.")
+        return
 
     vulns = _make_vulnerability_rows(reports)
     metrics = _compute_metrics(vulns)
