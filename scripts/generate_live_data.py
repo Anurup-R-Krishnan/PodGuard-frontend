@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
-"""Generate frontend live_data.json from Phase 1 scan report outputs."""
+"""Generate frontend live_data.json from PodGuard scan reports."""
 
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 from datetime import datetime, timezone
 
-REPO_ROOT = Path(__file__).resolve().parents[2]
-REPORTS_DIR = REPO_ROOT / "phase1_demo_reports"
-OUT_FILE = REPO_ROOT / "epss-frontend" / "public" / "data" / "live_data.json"
+REPO_ROOT = Path(__file__).resolve().parents[1]
+REPORTS_DIR = Path(
+    os.environ.get("PODGUARD_REPORTS_DIR", REPO_ROOT / "sample-reports")
+).expanduser()
+OUT_FILE = REPO_ROOT / "public" / "data" / "live_data.json"
 
 
 def _load_reports() -> list[dict]:
@@ -74,14 +77,14 @@ def _compute_metrics(vulns: list[dict]) -> dict:
 def main() -> None:
     reports = _load_reports()
     if not reports:
-        print(f"Warning: No report files found in: {REPORTS_DIR}. Skipping.")
+        print(f"No reports found in {REPORTS_DIR}; keeping bundled dashboard data")
         return
 
     vulns = _make_vulnerability_rows(reports)
     metrics = _compute_metrics(vulns)
 
     payload = {
-        "image": f"phase1-demo:{len(reports)}-reports",
+        "image": f"podguard-sample:{len(reports)}-reports",
         "scannedAt": datetime.now(timezone.utc).isoformat(),
         "metrics": metrics,
         "vulnerabilities": vulns,
